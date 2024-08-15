@@ -1,16 +1,46 @@
 import logo from "./logo.svg";
 import "./App.scss";
+import { ToastContainer, toast } from "react-toastify";
+import Job from "./jobs/Job";
+import Todo from "./todos/Todo";
+import Home from "./homes/Home";
+import Nav from "./nav/Nav";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <Nav />
+          <img src={logo} className="App-logo" alt="logo" />
+
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/todos">
+              <Todo />
+            </Route>
+            <Route path="/jobs">
+              <Job />
+            </Route>
+          </Switch>
+        </header>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        ></ToastContainer>
+      </div>
+    </Router>
   );
 }
 

@@ -1,4 +1,24 @@
+### install sass -> sd scss
+
+npm i sass
+
+### install react router
+
+npm install --save-exact react-router-dom@5.3.0
+
+### install version react 17.0.2
+
+npm install react@18.3.1 react-dom@18.0.0
+
+### install toastify -> show notice
+
+npm install --save-exact react-toastify
+
 # Getting Started with Create React App
+
+### version react
+
+npm view react version
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
