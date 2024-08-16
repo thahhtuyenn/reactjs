@@ -6,7 +6,7 @@ npm i sass
 
 npm install --save-exact react-router-dom@5.3.0
 
-### install version react 17.0.2
+### install version react 18.0.0
 
 npm install react@18.3.1 react-dom@18.0.0
 
