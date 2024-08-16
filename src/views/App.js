@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.scss";
+import "./todos/Todo.scss";
 import { ToastContainer, toast } from "react-toastify";
 import Job from "./jobs/Job";
 import Todo from "./todos/Todo";

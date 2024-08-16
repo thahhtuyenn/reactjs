@@ -1,4 +1,6 @@
 import React from "react";
+import "./Todo.scss";
+import { toast } from "react-toastify";
 
 class AddTodo extends React.Component {
   state = {
@@ -12,7 +14,25 @@ class AddTodo extends React.Component {
     });
   };
 
-  handleAddTodo = (event) => {};
+  handleAddTodo = (event) => {
+    event.preventDefault();
+
+    if (!this.state.title) {
+      toast.error("Missing title!");
+      return;
+    }
+
+    this.props.addTodo({
+      id: Math.floor(Math.random() * 1111),
+      title: this.state.title,
+    });
+
+    toast.success("Add todo success");
+    this.setState({
+      id: "",
+      title: "",
+    });
+  };
 
   render() {
     return (
