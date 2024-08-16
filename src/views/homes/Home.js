@@ -1,11 +1,11 @@
 import React from "react";
-import "./Home.scss";
 import { withRouter } from "react-router";
+import Color from "../HOC/Color";
 
 class Home extends React.Component {
   componentDidMount() {
     setTimeout(() => {
-      this.props.history.push("/todos");
+      // this.props.history.push("/todos");
     }, 3000);
   }
   //HOC: higher order component
@@ -14,10 +14,10 @@ class Home extends React.Component {
 
     return (
       <>
-        <div className="home-page">Home page react js</div>
+        <div>Home page react js</div>
       </>
     );
   }
 }
 
-export default withRouter(Home);
+export default Color(Home);
